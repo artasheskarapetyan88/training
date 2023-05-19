@@ -1,6 +1,7 @@
 import {Dropdown, Tag} from "antd";
 import {DeleteOutlined, EllipsisOutlined} from "@ant-design/icons";
-import {SwitchStatus} from "./SwitchStatus";
+import {PeopleType} from "./utils";
+import {SwitchStatus} from "./SwichStatus";
 
 export const columnsList = (showModal, data) => {
     const items = (id) => [
@@ -12,22 +13,36 @@ export const columnsList = (showModal, data) => {
             key: "0",
             danger: true
         }]
-
     return [
         {
-            title: 'Title',
-            dataIndex: 'title',
-            width: "50%"
+            title: 'Name',
+            dataIndex: 'name',
         },
         {
-            title: 'Last edited',
-            dataIndex: 'lastEdit',
-            width: "40%"
+            title: 'Type',
+            dataIndex: 'type',
+            render: (_, {type}) => {
+                const text = type === PeopleType.USER && "User"
+                return (
+                    <>
+                        {text || "Visitor"}
+                    </>
+                )
+
+            }
+
+        },
+        {
+            title: 'Country',
+            dataIndex: 'country',
+        },
+        {
+            title: 'City',
+            dataIndex: 'city',
         },
         {
             title: 'Status',
             dataIndex: 'status',
-            width: "10%",
             render: (_, {status}) => {
                 const {color, text} = SwitchStatus(status);
                 return (
@@ -35,6 +50,14 @@ export const columnsList = (showModal, data) => {
                 )
 
             }
+        },
+        {
+            title: 'Last Seen',
+            dataIndex: 'lastSeen',
+        },
+        {
+            title: 'First Seen',
+            dataIndex: 'firstSeen',
         },
         {
             title: 'operation',
@@ -54,5 +77,4 @@ export const columnsList = (showModal, data) => {
                 ) : null,
         },
     ];
-
 }

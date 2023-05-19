@@ -37,7 +37,3 @@ export const InputSearch = styled.input`
   border-radius: 12px;
   border: 1px solid gray;
 `
-
-export const DeleteWrapper = styled.div`
-
-`
