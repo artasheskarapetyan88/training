@@ -9,7 +9,7 @@ function Login() {
     const navigate = useNavigate()
     const onFinish = async (values) => {
         const {data} = await axios.post("https://reqres.in/api/login", values)
-        Cookies.set("Token", data.token)
+        Cookies.set("token", data.token)
         navigate("trainings")
     }
     return (
