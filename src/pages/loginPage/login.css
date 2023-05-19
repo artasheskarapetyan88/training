@@ -1,0 +1,73 @@
+.loginLogoNameWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.loginLogo{
+    height: 40px;
+    width: 60px;
+}
+
+.loginLogoName{
+    font-size: 40px;
+}
+
+.loginButtom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ padding: 48px 24px;
+    margin-top: 72px;
+
+}
+.registerWrapper{
+    width: 368px;
+    max-width: 368px;
+}
+
+.singtext{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+.createAccHref{
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.signGoogle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.signGoogleButton{
+width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.googleImg{
+    width: 24px;
+    height: 24px;
+}
+
+.css-dev-only-do-not-override-1vtf12y{
+    max-width: 100% !important;
+}
+
+.forAll{
+    width: 100%;
+    max-width: 100%;
+}

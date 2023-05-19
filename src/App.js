@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from "./pages/loginPage/Login";
+import Dialogues from "./pages/dialogues";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ProtectedRout from "./routs/ProtectedRouts";
+import Tairning from "./pages/Tairning";
+import Test from "./pages/test/Test";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<ProtectedRout/>}>
+            <Route path="/dialogues" element={ <Dialogues/> }/>
+            <Route path="/people" element={ <Tairning/> }/>
+            <Route path="/test" element={ <Test/> }/>
+          </Route>
+          <Route path="/" element={<Login/>}/>
+        </Routes>
+
+        </BrowserRouter>
+
   );
 }
 
